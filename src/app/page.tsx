@@ -18,8 +18,8 @@ const items = [
 
 export default function Home() {
   return (
-    <>
-      <main className="min-h-screen bg-gray-50 text-gray-900 max-w-2xl mx-auto px-4 py-10">
+    <div className="min-h-screen bg-gray-50 text-gray-900">
+      <main className="max-w-2xl mx-auto px-4 py-10">
         <Head>
           <title>Accessible Accordion</title>
         </Head>
@@ -44,7 +44,7 @@ export default function Home() {
           </p>
         </section>
       </main>
-      <footer className="mt-16 text-center text-sm text-gray-500">
+      <footer className="mt-16 text-center text-sm text-gray-500 pb-10">
         Built with ❤️ by{" "}
         <a
           href="https://github.com/samuelfuchs"
@@ -55,6 +55,6 @@ export default function Home() {
           Samuel Fuchs
         </a>
       </footer>
-    </>
+    </div>
   );
 }
