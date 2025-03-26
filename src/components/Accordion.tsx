@@ -17,7 +17,7 @@ export const Accordion = ({ items }: AccordionProps) => {
   };
 
   return (
-    <div className="border border-gray-300 rounded-md divide-y divide-gray-200">
+    <div className="border border-gray-300 rounded-md divide-y divide-gray-200 bg-white shadow-sm">
       {items.map((item, index) => (
         <AccordionItem
           key={index}
