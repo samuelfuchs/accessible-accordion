@@ -19,12 +19,21 @@ const AccordionItem = ({
       aria-controls={`section-${index}`}
       id={`accordion-${index}`}
       onClick={() => onToggle(index)}
-      className={`font-semibold text-left w-full py-3 px-4 ${
+      className={`cursor-pointer font-semibold text-left w-full py-3 px-4 flex items-center justify-between ${
         isOpen ? "bg-blue-50 text-blue-900" : "bg-gray-100 text-gray-900"
       } hover:bg-blue-100 focus:outline focus:outline-2 focus:outline-blue-600`}
     >
-      {title}
+      <span>{title}</span>
+      <span
+        aria-hidden="true"
+        className={`ml-2 transition-transform duration-100 ${
+          isOpen ? "rotate-180" : "rotate-0"
+        }`}
+      >
+        ▼
+      </span>
     </button>
+
     <div
       id={`section-${index}`}
       role="region"
