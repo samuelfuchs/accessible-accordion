@@ -1,7 +1,9 @@
 # Accessible Accordion
 
 ## This project demonstrates a simple accordion built with accessibility in mind, following WCAG 2.1 guidelines.
-        
+
+I could've followed best practices and create separate branches for each feature and fix, but i kept my commits to the `main` branch for simplicity.
+
 Step by step
 1. Project Configuration
 
@@ -29,7 +31,7 @@ Testing
 Showed 2 issues:
 
 - Documents must have <title> element to aid in navigation
-Fix: added a title to the <html> tag.
+Fix: set document title using Next.js metadata
 
 - Links must be distinguishable without relying on color
 Fix 1: Used a darker blue for the <footer>'s <a> tag.

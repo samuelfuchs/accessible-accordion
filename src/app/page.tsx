@@ -1,6 +1,10 @@
 import { Accordion } from "@/components/Accordion";
 import Head from "next/head";
 
+export const metadata = {
+  title: "Accessible Accordion",
+};
+
 const items = [
   {
     title: "What is this project?",
