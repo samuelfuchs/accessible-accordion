@@ -50,7 +50,7 @@ export default function Home() {
           href="https://github.com/samuelfuchs"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="text-blue-700 underline hover:text-blue-800 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Samuel Fuchs
         </a>

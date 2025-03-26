@@ -23,3 +23,14 @@ Level A/AA
 4. Main Page Layout (page.tsx)
 
 - Semantic HTML tags (h1 and h2 hierarchy)
+
+Testing
+## Axe - initial scan
+Showed 2 issues:
+
+- Documents must have <title> element to aid in navigation
+Fix: added a title to the <html> tag.
+
+- Links must be distinguishable without relying on color
+Fix 1: Used a darker blue for the <footer>'s <a> tag.
+Fix 2: Added an underline
