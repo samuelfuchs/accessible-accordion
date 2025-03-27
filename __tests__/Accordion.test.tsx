@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Accordion } from "@/components/Accordion";
 
 const items = [
@@ -34,6 +35,24 @@ describe("Accordion", () => {
     expect(button).toHaveAttribute("aria-expanded", "true");
 
     fireEvent.click(button);
+    expect(button).toHaveAttribute("aria-expanded", "false");
+  });
+  
+  it("allows toggling via keyboard (Enter and Space)", async () => {
+    const user = userEvent.setup();
+    render(<Accordion items={items} />);
+
+    const button = screen.getByRole("button", { name: "First" });
+
+    await user.tab();
+    expect(button).toHaveFocus();
+
+    await user.keyboard("[Space]");
+    expect(screen.getByText("First content")).toBeVisible();
+    expect(button).toHaveAttribute("aria-expanded", "true");
+
+    await user.keyboard("[Enter]");
+    expect(screen.queryByText("First content")).not.toBeVisible();
     expect(button).toHaveAttribute("aria-expanded", "false");
   });
 });
