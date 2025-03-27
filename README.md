@@ -1,6 +1,8 @@
-# Accessible Accordion
+# Simple Accessible Accordion
 
-A lightweight, WCAG-compliant accordion component built with **Next.js**, **React**, and **Tailwind CSS** — accessibility-first, developer-friendly, and cleanly documented.
+I built this project to showcase how to create accessible UI components — and how to **test**, **validate**, and ensure they behave the way users (and screen readers) expect.
+
+It’s a simple accordion built with **Next.js**, **React**, and **Tailwind CSS**, but designed with accessibility at its core. From ARIA attributes to keyboard navigation and screen reader support, this component reflects my commitment to building inclusive web experiences.
 
 ## Notes
 
@@ -20,22 +22,6 @@ Try it here: [samuel-fuchs-accessible-accordion.netlify.app](https://samuel-fuch
 - Axe-tested: 0 violations
 - Jest-tested for accessibility behaviors
 
-## Screenshots
-
-### Axe Audit – 0 Issues
-![Axe test passing](./public/screenshots/axe/axe-initial-scan-pass-02.png)
-
-### Axe Audit – first scan
-![Axe first scan](./public/screenshots/axe/axe-initial-scan-pass-01.png)
-
-### VoiceOver Reading Accordion
-![VoiceOver reading](./public/screenshots/voiceover/voiceover-expanded-state.png)
-
-### Mobile Responsive View
-![Mobile view](./public/screenshots/mobile/mobile-view.png)
-
-### Jest Tests Passing
-![Jest passing](./public/screenshots/testing/jest-tests-passing.png)
 
 ## Accessibility Testing
 
@@ -43,7 +29,7 @@ Try it here: [samuel-fuchs-accessible-accordion.netlify.app](https://samuel-fuch
 - Used the browser extension to validate color contrast, ARIA usage, and interactions
 - Fixed all initial issues:
 - Missing <title> → Fixed via Next.js metadata
-- Link not distinguishable → Darker blue + underline
+- Link color contrast → Adjusted and underlined
 
 ### VoiceOver (macOS)
 - Button labels are read correctly
@@ -84,7 +70,7 @@ npm run test
 3. ARIA & WCAG Support
 
 - Level A/AA:
-- `aria-expanded1`, `aria-controls`, `aria-labelledby`
+- `aria-expanded`, `aria-controls`, `aria-labelledby`
 - `role="region"` for content
 - Focus styles using `focus:outline`
 
@@ -97,6 +83,23 @@ npm run test
 
 - Axe: initial scan flagged 2 issues → resolved
 - VoiceOver manually tested
+
+## Screenshots
+
+### Axe Audit – 0 Issues
+![Axe test passing](./public/screenshots/axe/axe-initial-scan-pass-02.png)
+
+### Axe Audit – first scan
+![Axe first scan](./public/screenshots/axe/axe-initial-scan-pass-01.png)
+
+### VoiceOver Reading Accordion
+![VoiceOver reading](./public/screenshots/voiceover/voiceover-expanded-state.png)
+
+### Mobile Responsive View
+![Mobile view](./public/screenshots/mobile/mobile-view.png)
+
+### Jest Tests Passing
+![Jest passing](./public/screenshots/testing/jest-tests-passing.png)
 
 ## Author
 
