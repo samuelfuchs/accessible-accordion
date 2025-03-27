@@ -1,47 +1,105 @@
 # Accessible Accordion
 
-## This project demonstrates a simple accordion built with accessibility in mind, following WCAG 2.1 guidelines.
+A lightweight, WCAG-compliant accordion component built with **Next.js**, **React**, and **Tailwind CSS** — accessibility-first, developer-friendly, and cleanly documented.
 
-I could've followed best practices and create separate branches for each feature and fix, but i kept my commits to the `main` branch for simplicity.
+## Notes
 
-Step by step
+I could have created separate branches for each feature and fix, but kept everything in main for simplicity in this case.
+
+## Live Demo
+
+Try it here: [samuel-fuchs-accessible-accordion.netlify.app](https://samuel-fuchs-accessible-accordion.netlify.app/)
+
+## Features
+
+- WCAG 2.1 A/AA–compliant styling and markup
+- Keyboard-accessible (Tab, Enter, Space)
+- ARIA attributes: `aria-expanded`, `aria-controls`, `aria-labelledby`, `role="region"`
+- Icon rotation for visual cue
+- Responsive layout
+- Axe-tested: 0 violations
+- Jest-tested for accessibility behaviors
+
+## Screenshots
+
+### Axe Audit – 0 Issues
+![Axe test passing](./public/screenshots/axe/axe-initial-scan-pass-02.png)
+
+### Axe Audit – first scan
+![Axe first scan](./public/screenshots/axe/axe-initial-scan-pass-01.png)
+
+### VoiceOver Reading Accordion
+![VoiceOver reading](./public/screenshots/voiceover/voiceover-expanded-state.png)
+
+### Mobile Responsive View
+![Mobile view](./public/screenshots/mobile/mobile-view.png)
+
+### Jest Tests Passing
+![Jest passing](./public/screenshots/testing/jest-tests-passing.png)
+
+## Accessibility Testing
+
+### Axe DevTools
+- Used the browser extension to validate color contrast, ARIA usage, and interactions
+- Fixed all initial issues:
+- Missing <title> → Fixed via Next.js metadata
+- Link not distinguishable → Darker blue + underline
+
+### VoiceOver (macOS)
+- Button labels are read correctly
+- `aria-expanded` state is announced
+- Toggled content is properly accessible
+
+### Keyboard Navigation
+- Tabbing focuses each button
+- Space / Enter toggle open/close state
+- Visual focus rings are present
+
+## Testing
+
+Tested with `Jest` and `React Testing Library` using `@testing-library/user-event` for realistic interactions.
+
+### What’s covered:
+
+- Renders all accordion items
+- Toggles content on click and with keyboard
+- `aria-expanded` updates correctly
+- Keyboard focus and toggling via Enter/Space
+
+### Run tests:
+
+```
+npm run test
+```
+
+## Build Steps I took
 1. Project Configuration
 
-- Next.js, Typescript, Tailwind, eslint
+- Initialized project with Next.js, Tailwind, TypeScript
 
-2. Created Accordion Component
+2. Accordion Component
 
-- Created a reusable Accordion component
+- Built fully accessible component with props
 
-3. ARIA & Accessibility Basics
+3. ARIA & WCAG Support
 
-Level A/AA
+- Level A/AA:
+- `aria-expanded1`, `aria-controls`, `aria-labelledby`
+- `role="region"` for content
+- Focus styles using `focus:outline`
 
-- aria-expanded, aria-controls, aria-labelledby
-- role="region" for content panels
-- hidden={!isOpen} to hide inactive panels from screen readers
-- Focus styles are visible via Tailwind focus:outline
+4. Main Page Layout
 
-4. Main Page Layout (page.tsx)
+- Used semantic headings (example: h1, h2)
+- Sectioned content
 
-- Semantic HTML tags (h1 and h2 hierarchy)
+5. Accessibility Passes
 
-Testing
-## Axe - initial scan
-Showed 2 issues:
+- Axe: initial scan flagged 2 issues → resolved
+- VoiceOver manually tested
 
-- Documents must have <title> element to aid in navigation
-Fix: set document title using Next.js metadata
+## Author
 
-- Links must be distinguishable without relying on color
-Fix 1: Used a darker blue for the <footer>'s <a> tag.
-Fix 2: Added an underline
+Made with ❤️ by [Samuel Fuchs](https://github.com/samuelfuchs)
 
-### VoiceOver - Screen Reader Test
-This component was manually tested with VoiceOver (macOS).
-
-- Button labels were announced correctly
-- aria-expanded was read aloud as expected
-- Expanded content was accessible after toggling
-
-![VoiceOver reading expanded state](./public/screenshots/voiceover-expanded-state.png)
+I care deeply about building inclusive, user-first digital experiences — and I’m always learning more about how accessibility can drive better UX and broader reach.
