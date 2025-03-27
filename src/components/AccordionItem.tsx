@@ -15,7 +15,7 @@ const AccordionItem = ({
 }: AccordionItemProps) => (
   <div>
     <button
-      aria-expanded={isOpen}
+      aria-expanded={isOpen ? "true" : "false"}
       aria-controls={`section-${index}`}
       id={`accordion-${index}`}
       onClick={() => onToggle(index)}
