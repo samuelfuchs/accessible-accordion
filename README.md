@@ -28,6 +28,8 @@ Try it here:
 
 ## Accessibility Testing
 
+All related screenshots can be found in the Screenshots section below
+
 ### Axe DevTools
 - Used the browser extension to validate color contrast, ARIA usage, and interactions
 
@@ -35,10 +37,22 @@ Fixed all initial issues:
 - Missing `<title>` → Fixed via Next.js metadata
 - Link color contrast → Adjusted and underlined
 
+### Lighthouse
+
+- Ran an accessibility audit using Chrome Lighthouse
+- Score: **100 / 100**
+- Verified semantic structure, ARIA roles, contrast, and keyboard support
+
 ### VoiceOver (macOS)
 - Button labels are read correctly
 - `aria-expanded` state is announced
 - Toggled content is properly accessible
+
+### WAVE (WebAIM)
+
+- Used the WAVE browser extension to review accessibility visually
+- No critical errors flagged
+- Verified presence of landmarks, heading structure, and ARIA attributes
 
 ### Keyboard Navigation
 - Tabbing focuses each button
@@ -99,6 +113,12 @@ npm run test
 
 ### VoiceOver Reading Accordion
 ![VoiceOver reading](./public/screenshots/voiceover/voiceover-expanded-state.png)
+
+### Lighthouse Analysis
+![Lighthouse audit](./public/screenshots/lighthouse/lighthouse-accessibility-score.png)
+
+### WAVE Overlay on Accordion  
+![WAVE overlay](./public/screenshots/wave/wave-overlay-screenshot.png)
 
 ### Mobile Responsive View
 ![Mobile view](./public/screenshots/mobile/mobile-view.png)
