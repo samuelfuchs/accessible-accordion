@@ -2,7 +2,7 @@
 
 I built this project to showcase how to create accessible UI components — and how to **test**, **validate**, and ensure they behave the way users (and screen readers) expect.
 
-It’s a simple accordion built with **Next.js**, **React**, and **Tailwind CSS**, but designed with accessibility at its core. From ARIA attributes to keyboard navigation and screen reader support, this component reflects my commitment to building inclusive web experiences.
+It’s a simple accordion built with **Next.js**, **React**, and **Tailwind CSS**, but designed with accessibility at its core. From ARIA attributes to keyboard navigation and screen reader support.
 
 ## Notes
 
@@ -10,24 +10,26 @@ I could have created separate branches for each feature and fix, but kept everyt
 
 ## Live Demo
 
-Try it here: [samuel-fuchs-accessible-accordion.netlify.app](https://samuel-fuchs-accessible-accordion.netlify.app/)
+Try it here: 
+
+[samuel-fuchs-accessible-accordion.netlify.app](https://samuel-fuchs-accessible-accordion.netlify.app/)
 
 ## Features
 
-- WCAG 2.1 A/AA–compliant styling and markup
-- Keyboard-accessible (Tab, Enter, Space)
+- WCAG 2.1 A/AA–compliant
+- Keyboard-accessible
 - ARIA attributes: `aria-expanded`, `aria-controls`, `aria-labelledby`, `role="region"`
 - Icon rotation for visual cue
 - Responsive layout
 - Axe-tested: 0 violations
 - Jest-tested for accessibility behaviors
 
-
 ## Accessibility Testing
 
 ### Axe DevTools
 - Used the browser extension to validate color contrast, ARIA usage, and interactions
-- Fixed all initial issues:
+
+Fixed all initial issues:
 - Missing <title> → Fixed via Next.js metadata
 - Link color contrast → Adjusted and underlined
 
@@ -65,7 +67,7 @@ npm run test
 
 2. Accordion Component
 
-- Built fully accessible component with props
+- Built accessible component
 
 3. ARIA & WCAG Support
 
