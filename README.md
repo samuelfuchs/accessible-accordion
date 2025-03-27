@@ -2,11 +2,13 @@
 
 I built this project to showcase how to create accessible UI components — and how to **test**, **validate**, and ensure they behave the way users (and screen readers) expect.
 
-It’s a simple accordion built with **Next.js**, **React**, and **Tailwind CSS**, but designed with accessibility at its core. From ARIA attributes to keyboard navigation and screen reader support.
+It’s designed with accessibility at its core.
 
 ## Notes
 
-I could have created separate branches for each feature and fix, but kept everything in main for simplicity in this case.
+I could have created separate branches for each feature and fix, but kept everything in `main` for simplicity in this case.
+
+That said, I made sure to keep the commits concise and descriptive, so you can explore the commit history for a clear view of the development process and decisions made along the way.
 
 ## Live Demo
 
@@ -30,7 +32,7 @@ Try it here:
 - Used the browser extension to validate color contrast, ARIA usage, and interactions
 
 Fixed all initial issues:
-- Missing <title> → Fixed via Next.js metadata
+- Missing `<title>` → Fixed via Next.js metadata
 - Link color contrast → Adjusted and underlined
 
 ### VoiceOver (macOS)
@@ -56,11 +58,12 @@ Tested with `Jest` and `React Testing Library` using `@testing-library/user-even
 
 ### Run tests:
 
-```
+```bash
 npm run test
 ```
 
-## Build Steps I took
+## Build Process
+
 1. Project Configuration
 
 - Initialized project with Next.js, Tailwind, TypeScript
